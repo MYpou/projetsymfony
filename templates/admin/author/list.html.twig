@@ -1,0 +1,31 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Auteurs{% endblock %}
+
+{% block main %}
+
+<h2>Liste des auteurs</h2>
+
+<div class="authorsListContainer">
+
+  {% for author in authors %}
+    <div>
+      <li>Id : {{ author.id }}</li>
+    </div>
+    <div>
+        <li>Nom : {{ author.name }}</li>
+    </div>
+    <div>
+      <button type="submit"><a href="{{ path('app_admin_author_update', {'id': author.id}) }}">Modifier ou Supprimer</a></button>
+    </div>
+    {% endfor %}
+
+</div>
+
+<button><a href="{{ path('app_admin_author_create') }}">Ajouter un nouvel auteur</a></button>
+
+<a href="{{ path('app_admin_author_index') }}">Retour à l'accueil</a>
+
+
+{% endblock %}

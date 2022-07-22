@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil Admin{% endblock %}
+
+{% block main %}
+
+  <h2>Bienvenue, veuillez actualiser votre list :</h2>
+
+  <button class="btnList"><a href="{{ path('app_admin_author_create') }}">Ajouter un Auteur</a></button>
+
+  <button><a href="{{ path('app_admin_author_list') }}">Liste des auteurs</a></button>
+
+  <button><a href="{{ path('app_admin_category_newCategory') }}">Ajouter une nouvelle catégories</a></button>
+
+  <button><a href="{{ path('app_admin_category_list') }}">Liste des catégories</a></button>
+
+  <button><a href="{{ path('app_admin_book_newBook') }}">Ajouter un nouveau livre</a></button>
+
+  <button><a href="{{ path('app_admin_book_list') }}">Liste des livres</a></button>
+
+  <button><a href="{{ path('app_admin_publishing_house_create') }}">Ajouter une nouvelle Maison d'édition</a></button>
+
+  <button><a href="{{ path('app_admin_publishing_house_list') }}">Liste des Maisons d'édition</a></button>
+
+{% endblock %}

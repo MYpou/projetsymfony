@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvel Auteur{% endblock %}
+
+{% block main %}
+
+<h2>Ajouter un nouvel auteur à la base de données</h2>
+
+{# <form method="POST">
+  <div>
+    <label for="name">Nom : </label>
+    <input type="text" name="name" id="name">
+  </div>
+  <div>
+    <label for="description">Description : </label>
+    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+  </div>
+  <div>
+    <label for="imageUrl">Image : </label>
+    <input type="text" name="imageUrl" id="imageUrl">
+  </div>
+  <button type="submit">Ajouter</button>
+</form> #}
+
+{{ form(view) }}
+    <nav>
+        <a href="{{ path('app_admin_author_index') }}">Retour à l'accueil</a>
+    </nav>
+
+{% endblock %}

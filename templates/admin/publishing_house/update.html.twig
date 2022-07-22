@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier une Maison d'édition{% endblock %}
+
+{% block main %}
+
+<h2>Modifier les données d'une Maison d'édition</h2>
+
+{{ form(view) }}
+<button><a href="{{ path('app_admin_publishing_house_delete', {'id': house.id}) }}">Supprimer</a></button>
+
+<a href="{{ path('app_admin_publishing_house_index') }}">Retour à l'accueil</a>
+
+
+{% endblock %}

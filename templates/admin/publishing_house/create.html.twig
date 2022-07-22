@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle Maison d'édition{% endblock %}
+
+{% block main %}
+
+<h2>Ajouter une nouvelle Maison D'édition a la base de données</h2>
+
+{{ form(view) }}
+      <nav>
+          <a href="{{ path('app_admin_publishing_house_index') }}">Retour à l'accueil</a>
+      </nav>
+{% endblock %}

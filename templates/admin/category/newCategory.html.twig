@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle Catégorie{% endblock %}
+
+{% block main %}
+
+<h2>Ajouter une nouvelle catégorie à la base de données</h2>
+
+{{ form(view) }}
+    <nav>
+        <a href="{{ path('app_admin_category_index') }}">Retour à l'accueil</a>
+    </nav>
+
+{% endblock %}

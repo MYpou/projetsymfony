@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Maisons d'édition{% endblock %}
+
+{% block main %}
+
+<h2>Liste des Maisons d'édition</h2>
+
+<div class="publishingHouseListContainer">
+
+  {% for house in houses %}
+    <div>
+      <li>Id : {{ house.id }}</li>
+    </div>
+    <div>
+        <li>Nom : {{ house.name }}</li>
+    </div>
+    <div>
+      <button type="submit"><a href="{{ path('app_admin_publishing_house_update', {'id': house.id}) }}">Modifier ou Supprimer</a></button>
+    </div>
+    {% endfor %}
+
+</div>
+
+<button><a href="{{ path('app_admin_publishing_house_create') }}">Ajouter une nouvelle Maisons d'édition</a></button>
+
+<a href="{{ path('app_admin_publishing_house_index') }}">Retour à l'accueil</a>
+
+
+{% endblock %}
